@@ -1,0 +1,5 @@
+FROM {{ user_data.get('img') }}
+
+ADD {{ user_data.get('art') }}
+EXPOSE {{ user_data.get('port') }}
+

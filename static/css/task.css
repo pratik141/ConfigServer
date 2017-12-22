@@ -1,0 +1,189 @@
+body {
+    margin: 5px;
+    padding: 0px;
+    font-family: OpenSans_Regular, Arial, Helvetica, sans-serif;
+}
+
+img {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+a {
+    outline: none;
+}
+
+
+h1 {
+    font-family: OpenSans_Bold,Arial,Helvetica,sans-serif;
+    font-size: 30px;
+    color: #435070;
+    line-height: 35px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+    h1 span {
+        color: #eeeeee;
+    }
+
+h2 {
+    font-family: OpenSans_Regular,Arial,Helvetica,sans-serif;
+    font-size: 28px;
+    color: #435070;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+}
+
+    h2 span {
+        font-size: 20px;
+        padding-left: 30%
+        color: blue;
+    }
+
+
+
+h3 {
+    font-family: OpenSans_Regular,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #435070;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    width: 100%;
+    font-weight: normal;
+}
+
+    h3 span {
+        font-family: SourceSansPro_Semibold, Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+h4 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #778897;
+}
+
+p {
+    font-family: OpenSans_Regular, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    /*color: #787878;*/
+    margin: 0px;
+    padding: 0px;
+    line-height: normal;
+    text-align: center;
+}
+
+    p b {
+        color: #202020;
+        font-weight: bold;
+    }
+
+
+.body_img {
+    width: 100%;
+    height: auto;
+    float: left;
+    max-width: 1920px;
+    background-position: top center !important;
+    margin-top: 55px;
+}
+
+.SampleImagesDiv {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+    .SampleImagesDiv img {
+        width: 100%;
+        float: left;
+    }
+
+.clear {
+    clear: both;
+}
+
+.clear10 {
+    clear: both;
+    height: 10px;
+}
+
+.Header {
+    width: 100%;
+    height: auto;
+    float: left;
+    position: fixed;
+    z-index: 1001;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #b9b9b9;
+    opacity: 0.8;
+    /*background:url("../images/dott.png") repeat scroll 0 0*/
+}
+
+
+.Logo {
+    width: 137px;
+    height: auto;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    .Logo img {
+        width: 100%;
+    }
+
+
+.Menu {
+    height: auto;
+    width: 100%;
+    float: left;
+}
+
+.mainTask{
+    background-color: rgba(105, 105, 105, 0.05);
+}
+
+.tableTop{
+    width: 130px;
+    font-family: cursive;
+}
+
+.buttonBoxMain {
+    float:left;
+    width:30%;
+    margin:1.5% 1%;
+    border:2px solid #DBDBDB;
+    height:60px;
+    min-width:255px;
+    transition:all 0.3s ease-in-out;
+    background-color:#f0ad4e;
+    border-radius: 4px;
+    border: 1px
+    solid black;padding: 5px;
+
+}
+
+.mytextbox{
+    width:200px;height:200px;box-shadow:2px 1px 5px 1px #000;
+
+}
+
+.boxed {
+  border: 1px solid green ;
+}

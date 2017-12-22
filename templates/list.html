@@ -1,0 +1,62 @@
+<html>
+  <head>  </head>
+
+  <link rel="icon" href="/static/images/favicon.ico">
+  <title>File ListPage </title>
+  <link rel="stylesheet" type="text/css" href="/static/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/task.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/js/task.js"></script>
+  
+  
+<body>
+
+<div  class="mainTask" style="border-radius: 14px; ">
+
+<header style="color:red;"><b style="float: left;color: blue; padding-left: 10"> Hi  {{ session_user_name }},
+</b>
+<a href="/logout" style="float: right;"> <b style="padding: 15px 15px 120px 45px;;">Logout</b> </a>
+</br></br> <br>    
+   </header>
+
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>                
+                <th>File Name</th>
+                <th>File Type</th>
+                <th>Hyperlink</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>File Name</th>
+                <th>File Type</th>
+                <th>Hyperlink</th>
+            </tr>
+        </tfoot>
+        <tbody>     
+
+        {% for file in filelist %}
+        <tr>
+          {% for data in file.split('.')[:-1] %}
+            <td>{{data}}</td>
+          {% endfor %}
+        <td>{{file.split('.')[-1]}}</td>
+        <td><a href="/getid/"> {{file.split('.')[-1]}} </a></td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+   
+    </div>
+<a style="float: right;" href="/">.</a>
+</body>
+
+<br>
+
+{% extends '/footer.html' %}
+
+</html>

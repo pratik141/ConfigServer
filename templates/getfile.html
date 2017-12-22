@@ -1,0 +1,96 @@
+<html>
+  <head>
+
+    <link rel="icon" href="/static/images/favicon.ico">
+   
+    <header ><b style="padding: 11px;float: left;color: blue;">
+    Hi {{ session_user_name }},</b>
+ 
+<a href="/logout" style="float: right;"> <b style="padding: 12px;">Logout</b> </a>
+ </header>
+   
+    <title>Portal for build name request</title>
+   
+    <script type="text/javascript"> var availableTags = {{ filelist|tojson }} </script>  
+    <script src="/static/js/jquery-1.7.2.min.js"></script>
+    <script src="/static/js/jquery-ui.js"></script>
+    <script src="/static/js/request.js"></script>
+    <script src="/static/js/style.js"></script>
+    <script type="text/javascript">$("div#extraControls").hide()</script>
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <style>
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+    </style>
+ 
+  </head>
+  <body  style="padding: 50px;">
+  <script type="text/javascript">
+  </script>
+    
+    <div style="
+    padding: 15px 0px 10px 450px; 
+    border: 1px solid;
+    border-radius: 14px;
+    border-color: #052909;
+    background-color: rgba(105, 105, 105, 0.05);">
+
+    <div>
+      <a href="/"><img src="/static/images/logo.png" style="width: 15%;"></a>
+      <!-- <img align="middel" src="/static/images/logo.png" "> -->
+    </div>
+
+    <br><br>
+      <table>
+      <tr>
+          <td>File Name:</td>
+          <td>
+            <div id="projectName"; class="ui-widget">
+            <input style=" height: 22; width: auto;" id="filelistid" required="true"/>
+            </div>
+        </td>
+      </tr>
+        <tr>
+          <td>Data</td>
+          <td>
+            <textarea id="filedataid" class="ReachUsForm_messageBox1" name="filedataid" width:25%; height:20%; required="True"></textarea>
+          </td>        
+        <!-- </tr>
+        <tr>
+         -->  <td>
+            <!-- &emsp; &emsp; -->
+        <select name='splittername' id='splitterid' class='splitter' required="True">
+            <option value='splitter' selected='None'>Splitter</option>
+            <option value=':'>:</option>
+            <option value='='>=</option>
+            <option value='null'>None</option>
+        </select>
+          </td>
+        <td>
+            &emsp; &emsp;
+        <select name='separatorname' id='separatorid' class='separator' required="True">
+            <option value=';' selected='None'>Separator</option>
+            <option value=';'>;</option>
+            <option value=','>,</option>
+        </select>
+          </td>
+        </tr>
+        <tr style="height: 55px; width: 375px;">
+
+          <td colspan="3" style="text-align: center; margin-top: 20px;">
+            <button onclick="sendRequest()" style="background-color:#f0ad4e;border-radius: 4px;border:1px solid black;padding:5px;height: 32px;width: 72px;"> Submit</button>
+          </td>
+        </tr>
+        
+    </div>
+      </table>
+    </div>
+    
+     </body> 
+{% extends '/footer.html' %}
+
+</html>

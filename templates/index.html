@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <header ><b style="padding: 11px;float: left;color: blue;">
+        Hi {{ session_user_name }},</b>
+     
+    <a href="/logout" style="float: right;"> <b style="padding: 12px;">Logout</b> </a>
+     </header>
+
+  <link href="/static/jQuery/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+  <link href="/static/jQuery/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <script src="/static/jQuery/jquery-1.10.1.min.js"></script>
+  <script src="/static/jQuery/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="/static/jQuery/jquery.ocupload-1.1.2.js"></script>
+  <script src="/static/jQuery/jQuery_Forms.js"></script>
+  <script type="text/javascript" src="/static/js/request.js"></script>
+
+  <title>Create properties</title>
+
+  </head>
+  <body style="padding: 50px;">
+
+    <div style="
+      padding: 15px 0px 10px 450px;border-radius: 14px;
+      border: 1px solid;border-color: #052909;
+      background-color: rgba(105, 105, 105, 0.05);">
+
+      <img align="middel" src="static/images/logo.png" style="width: 20%;">
+        <br/><br/>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+            <li> <p style="color: red">{{ message }}</p> </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <br>
+
+      <form method=post enctype=multipart/form-data action="{{ url_for('buildlogpost') }}">
+        <div>
+          <span>File option</span>
+          <input type="radio" name="fileoption" value="direct" checked> Direct
+          <input type="radio" name="fileoption" value="template"> Template
+      </div> <br>
+      <div>
+        <span> File Name</span>
+        <input type="text" name="filename" id="filename" placeholder="Enter filename" required="true">
+      </div>
+            <br>   
+      <div>        
+        <a>write here 
+        <input type="checkbox" onChange="addFileDataBox()" id="datacheckboxid" name="datacheckboxname" value="True"> 
+        <a>Overwrite </a>
+        <input type="checkbox" onChange="Overwrite()" id="overwritecheckboxid" name="overwritecheckboxname" value="False"> 
+        <div id="databoxdiv"> </div>
+        <br>
+        <input type="file" name="file" style="width: 20%;">
+        </a>
+      </div>            
+      <br>
+
+      <div style="display: block; width: 40%; text-align: center;">
+       <input type=submit value=Generate style="background-color:#f0ad4e;border-radius: 4px;
+        border:1px solid black;padding:5px;height: 32px;width: 72px;">
+</div>
+</form>
+   </div>
+  
+</body>
+{% extends '/footer.html' %}
+
+</html>
